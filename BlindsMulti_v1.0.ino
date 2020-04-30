@@ -1,5 +1,6 @@
 // Dual channel blinds with DHT22 temp sensor
-// positionStatus topic used to define boot position
+// positionState topic used to define boot position
+// For the first time usage, a position of 0 must be published on the /positionState/1 and /positionState/2 topics
 
 #include <PubSubClient.h>
 #include <SimpleTimer.h>    //https://github.com/marcelloromani/Arduino-SimpleTimer/tree/master/SimpleTimer
@@ -10,7 +11,7 @@
 #include "DHT.h"
 #include <ArduinoJson.h>
 #include <AccelStepper.h>
-#include <LocalLanStuff.h>
+#include <LocalLanStuff.h>  // This file contains the wifi info
 
 /*****************  START USER CONFIG SECTION *********************************/
 /*****************  START USER CONFIG SECTION *********************************/
