@@ -1,0 +1,20 @@
+- platform: mqtt
+  name: "Blinds 1"
+  command_topic: "BlindsMCU1/blindsCommand/1"
+  set_position_topic: "BlindsMCU1/positionCommand/1"
+  position_topic: "BlindsMCU1/positionState/1"
+  payload_open: "OPEN"
+  payload_close: "CLOSE"
+  payload_stop: "STOP"
+  position_open: 0
+  position_closed: 12000
+- platform: mqtt
+  name: "Blinds 2"
+  command_topic: "BlindsMCU1/blindsCommand/2"
+  set_position_topic: "BlindsMCU1/positionCommand/2"
+  position_topic: "BlindsMCU1/positionState/2"
+  payload_open: "OPEN"
+  payload_close: "CLOSE"
+  payload_stop: "STOP"
+  position_open: 0
+  position_closed: 11000
