@@ -183,7 +183,7 @@ void callback(char* topic, byte* payload, unsigned int length)
     {
         stepper1.enableOutputs();
         stepper1.moveTo(intPayload);
-        stepper1.setSpeed(400);
+        stepper1.setSpeed(800);
         moving1 = true;
     }
   }
@@ -193,7 +193,7 @@ void callback(char* topic, byte* payload, unsigned int length)
     {
         stepper2.enableOutputs();
         stepper2.moveTo(intPayload);
-        stepper2.setSpeed(400);
+        stepper2.setSpeed(800);
         moving2 = true;
     }
   }
@@ -271,15 +271,15 @@ void setup() {
   stepper1.setEnablePin(enablePin1);
   stepper1.setPinsInverted(true, false, true);
   stepper1.disableOutputs();
-  stepper1.setMaxSpeed(500);
-  stepper1.setSpeed(500);
+  stepper1.setMaxSpeed(800);
+  stepper1.setSpeed(800);
   stepper1.setAcceleration(500);
 
   stepper2.setEnablePin(enablePin2);
   stepper2.setPinsInverted(true, false, true);
   stepper2.disableOutputs();
-  stepper2.setMaxSpeed(500);
-  stepper2.setSpeed(500);
+  stepper2.setMaxSpeed(800);
+  stepper2.setSpeed(800);
   stepper2.setAcceleration(500);
   
   WiFi.mode(WIFI_STA);
