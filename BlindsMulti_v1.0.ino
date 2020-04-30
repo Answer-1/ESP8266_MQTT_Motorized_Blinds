@@ -18,7 +18,8 @@
 
 #define USER_MQTT_CLIENT_NAME     "BlindsMCU1"         // Used to define MQTT Client ID, and ArduinoOTA
 
-#define STEPS_TO_CLOSE            650                  //Defines the number of steps needed to open or close fully
+#define STEPS_TO_CLOSE_1            12000                  //Defines the number of steps needed to open or close fully
+#define STEPS_TO_CLOSE_2            11000                  //Defines the number of steps needed to open or close fully
 
 #define dirPin1 D6
 #define stepPin1 D7
@@ -142,7 +143,7 @@ void callback(char* topic, byte* payload, unsigned int length)
     }
     else if (newPayload == "CLOSE")
     {   
-      int stepsToClose = STEPS_TO_CLOSE;
+      int stepsToClose = STEPS_TO_CLOSE_1;
       String temp_str = String(stepsToClose);
       temp_str.toCharArray(charPayload, temp_str.length() + 1);
       client.publish(USER_MQTT_CLIENT_NAME"/positionCommand/1", charPayload);
@@ -163,7 +164,7 @@ void callback(char* topic, byte* payload, unsigned int length)
     }
     else if (newPayload == "CLOSE")
     {   
-      int stepsToClose = STEPS_TO_CLOSE;
+      int stepsToClose = STEPS_TO_CLOSE_2;
       String temp_str = String(stepsToClose);
       temp_str.toCharArray(charPayload, temp_str.length() + 1);
       client.publish(USER_MQTT_CLIENT_NAME"/positionCommand/2", charPayload);
