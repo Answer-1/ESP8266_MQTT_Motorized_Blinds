@@ -1,8 +1,8 @@
-# HomeAssistantMQTTBlinds
+# ESP8266 MQTT Motorized Blinds
 
 /// Version francaise plus bas ///
 
-Home Assistant MQTT blinds
+Home Assistant ESP8266 based MQTT motorized blinds
 
 2in "faux wood" horizontal blinds controlled with Home Assistant via MQTT
 
